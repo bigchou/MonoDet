@@ -35,10 +35,11 @@ for i, cat in enumerate(cats):
     cat_info.append({'name': cat, 'id': i})
 
 home_path = '.'
+data_path = '/home/iis/workspace/dataset/kitti3d'
 split = 'val1'
-label_dir = os.path.join(home_path, 'training', 'label_2')
-calib_dir = os.path.join(home_path, 'training', 'calib')
-image_dir = os.path.join(home_path, 'training', 'image_2')
+label_dir = os.path.join(data_path, 'training', 'label_2')
+calib_dir = os.path.join(data_path, 'training', 'calib')
+image_dir = os.path.join(data_path, 'training', 'image_2')
 
 for subset in ['train', 'val']:
     ret = {'images': [], 'annotations': [], "categories": cat_info}
